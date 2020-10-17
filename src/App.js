@@ -11,9 +11,8 @@ function App() {
       <Navbar/>
       <div className="container">
         <div className="row">
-            <SchoolCard school={data[0]} />
-            <SchoolCard school={data[1]} />
-            <SchoolCard school={data[2]} /> 
+            {data.map(school => {
+                return (<SchoolCard school={school} />)
             })}
         </div>
       </div>
